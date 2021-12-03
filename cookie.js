@@ -27,7 +27,7 @@ const flowBaseCookie = async(a, b, c, d, e = 182) => {
      
   else {
      $(a).remove();
-     $(d).hide();
+     $(d).remove();
   }
 
 };
