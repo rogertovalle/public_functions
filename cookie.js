@@ -20,8 +20,15 @@ const flowBaseCookie = async(a, b, c, d, e = 182) => {
   //clear the cookie
   $(c).click(() => document.cookie = 'cookieConsent=; expires=Thu, 01 Jan 1970 00:00:01 GMT;');
 
-  if (!decodeURIComponent(document.cookie).includes("cookieConsent=accepted")) $(a).show()
-  else $(a).remove()
+  if (!decodeURIComponent(document.cookie).includes("cookieConsent=accepted")) {
+     $(a).show();
+     $(d).hide();
+  }
+     
+  else {
+     $(a).remove();
+     $(d).hide();
+  }
 
 };
 
